@@ -21,14 +21,23 @@
   "scripts": {
     "dev": "ts-node ./src/",
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.ts'",
-    "build": "yarn test && tsc"
+    "build": "yarn test && tsc",
+    "lint": "eslint --fix ./src/*"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.3",
-    "mocha": "^8.1.3",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "chai-subset": "^1.6.0"
+    "chai-subset": "^1.6.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mocha": "^8.1.3",
+    "prettier": "^2.1.2"
   }
 }
