@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  node-ts-otimizado:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: msgateway
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "8080:8080"
+      - "8181:8181"
+    command: npm run dev
